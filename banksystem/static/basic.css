@@ -1,0 +1,164 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 60px;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #003366;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 30px;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+.error-message {
+    color: red;
+}
+
+.success-message {
+    color: green;
+}
+nav {
+    background-color: #003366;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.bank-logo {
+    height: 40px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.nav-left a.logo-link {
+    margin-right: 10px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    margin-right: 20px;
+    transition: box-shadow 0.2s;
+}
+
+.profile-img:hover {
+    box-shadow: 0 0 8px #fff;
+}*/
+body {
+    overflow-x: hidden;
+}
+ /* body {
+    overflow-y: hidden;
+}  */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.bank-logo {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.nav-left a:last-child {
+    margin-right: 0;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    transition: box-shadow 0.2s;
+}
+
+.profile-img:hover {
+    box-shadow: 0 0 8px #fff;
+}
