@@ -7,6 +7,7 @@ auth_bp = Blueprint('auth', __name__)
 
 @auth_bp.route('/')
 def home():
+    session.clear()
     return render_template('home.html')
 
 @auth_bp.route('/register', methods=['GET', 'POST'])
@@ -51,7 +52,25 @@ def register():
             current_app.logger.error(f"Registration error: {e}")
             return redirect(url_for('auth.register'))
     return render_template('register.html')
-
-
-
-
+@auth_bp.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        email = request.form['email'].strip().lower()
+        password = request.form['password']
+        conn = get_db()
+        cur = conn.cursor(dictionary=True)
+        cur.execute("SELECT * FROM USERS WHERE Email = %s", (email,))
+        user = cur.fetchone()
+        if user and check_password_hash(user['Password'], password):
+            session.permanent = True
+            session['user_id'] = user['User_Id']
+            session['email'] = user['Email']
+            return redirect(url_for('dashboard.dashboard'))
+        else:
+            flash("Invalid credentials.", "error")
+    return render_template('login.html')
+@auth_bp.route('/logout')
+def logout():
+    session.clear()
+    flash("Logged out successfully.", "success")
+    return redirect(url_for('auth.login'))
