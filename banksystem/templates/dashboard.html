@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block title %}Dashboard{% endblock %} {% block
+content %}
+<style>
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    text-align: center;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+</style>
+<div class="center-container">
+  <h1>Welcome, {{ customer.Fname }}!</h1>
+  <p><strong>Account Type:</strong> {{ account.Acc_type }}</p>
+  <p><strong>Balance:</strong> ₹{{ account.Bal }}</p>
+</div>
+{% endblock %}
