@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block extra_css %}<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='profile.css') }}"
+/>{% endblock %}{% block title %}Profile{% endblock %} {% block content %}
+<div class="profile-container">
+  <h2>Profile Information</h2>
+  <p>
+    <strong>Name:</strong> {{ customer.Fname }} {{ customer.Minit }} {{
+    customer.Lname }}
+  </p>
+  <p><strong>Email:</strong> {{ session.email }}</p>
+  <p><strong>Phone:</strong> {{ customer.Ph_no }}</p>
+  <p><strong>Address:</strong> {{ customer.Address }}</p>
+
+  {% if account %}
+  <h3>Account Details</h3>
+  <p><strong>Account Number:</strong> {{ account.Acc_no }}</p>
+  <p><strong>Type:</strong> {{ account.Acc_type }}</p>
+  <p><strong>Balance:</strong> ₹{{ account.Bal }}</p>
+  <a href="{{ url_for('auth.logout') }}">Logout</a>
+  {% else %}
+  <p>
+    No bank account found.
+    <a href="{{ url_for('account.create_account') }}">Create one now</a>.
+  </p>
+  {% endif %}
+</div>
+{% endblock %}
