@@ -1,0 +1,119 @@
+/* Ensure no scroll and full screen layout */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    box-sizing: border-box;
+}
+
+main {
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0073e6 0%, #00bfff 100%);
+    color: white;
+    padding: 2em 1em;
+    text-align: center;
+    border-radius: 0 0 50% 50% / 20%;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5em;
+}
+
+.hero .cta {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 0 0.5em;
+    box-shadow: 0 4px 12px rgba(255, 153, 0, 0.5);
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.hero .cta:hover {
+    background-color: #cc7a00;
+}
+
+.features {
+    margin-top: 1.5em;
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.features h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+    color: #004080;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.features li {
+    background-color: #e6f0ff;
+    border-radius: 12px;
+    padding: 1em 1.5em;
+    min-width: 200px;
+    font-weight: 600;
+    color: #004080;
+    box-shadow: 0 2px 8px rgba(0, 64, 128, 0.1);
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .features ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features li {
+        width: 90%;
+    }
+}

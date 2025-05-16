@@ -1,164 +1,119 @@
-/* body {
-    font-family: Arial, sans-serif;
+/* Reset and base styling */
+html,
+body {
     margin: 0;
-    padding-top: 60px;
-    background-color: #f4f4f4;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    box-sizing: border-box;
 }
 
+/* Fixed navigation bar */
 nav {
+    height: 70px;
+    width: 100%;
     background-color: #003366;
-    color: white;
-    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 10;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-nav a {
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left a,
+.nav-right a {
     color: white;
     text-decoration: none;
-    margin-right: 20px;
-    font-weight: bold;
+    margin-right: 40px;
+    margin-left: -20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.nav-left a:hover,
+.nav-right a:hover {
+    color: #ffcc00;
+}
+
+.bank-logo {
+    height: 40px;
+    margin-right: 15px;
+}
+.profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.profile-img:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
 .container {
-    padding: 30px;
+    margin-top: 70px;
+    padding: 2em;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 30px;
-}
+.success-message,
 .error-message {
-    color: red;
+    padding: 1em;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
 }
 
 .success-message {
-    color: green;
-}
-nav {
-    background-color: #003366;
-    color: white;
-    padding: 15px 30px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
 }
 
-.nav-left {
-    display: flex;
-    align-items: center;
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
 }
 
-.bank-logo {
-    height: 40px;
-    margin-right: 20px;
-    vertical-align: middle;
-}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em;
+        height: auto;
+    }
 
-.nav-left a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    font-weight: bold;
-}
+    .container {
+        padding: 1em;
+        height: auto;
+    }
 
-.nav-left a.logo-link {
-    margin-right: 10px;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-}
-
-.profile-img {
-    height: 38px;
-    width: 38px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #fff;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-    margin-left: 10px;
-    margin-right: 20px;
-    transition: box-shadow 0.2s;
-}
-
-.profile-img:hover {
-    box-shadow: 0 0 8px #fff;
-}*/
-body {
-    overflow-x: hidden;
-}
- /* body {
-    overflow-y: hidden;
-}  */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #003366;
-    padding: 15px 30px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-.nav-left {
-    display: flex;
-    align-items: center;
-}
-
-.bank-logo {
-    height: 40px;
-    margin-right: 20px;
-}
-
-.nav-left a {
-    color: white;
-    text-decoration: none;
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-.nav-left a:last-child {
-    margin-right: 0;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-}
-
-.profile-link {
-    display: flex;
-    align-items: center;
-}
-
-.profile-img {
-    height: 38px;
-    width: 38px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #fff;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-    margin-right: 20px;
-    transition: box-shadow 0.2s;
-}
-
-.profile-img:hover {
-    box-shadow: 0 0 8px #fff;
+    .nav-left a,
+    .nav-right a {
+        margin: 0.5em 0;
+    }
 }

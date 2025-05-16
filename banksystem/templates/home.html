@@ -2,40 +2,22 @@
 %}
 <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}" />
 
-<div class="hero">
-  <h2>Welcome to the Online Bank Platform</h2>
-  <p>Your secure, modern banking experience starts here.</p>
-  <a href="{{ url_for('auth.register') }}" class="cta">Open an Account</a>
-  <a href="{{ url_for('auth.login') }}" class="cta">Login</a>
-</div>
+<main>
+  <div class="hero">
+    <h2>Welcome to the Online Bank Platform</h2>
+    <p>Your secure, modern banking experience starts here.</p>
+    <a href="{{ url_for('auth.register') }}" class="cta">Open an Account</a>
+    <a href="{{ url_for('auth.login') }}" class="cta">Login</a>
+  </div>
 
-<section class="features">
-  <h3>Our Services</h3>
-  <ul>
-    <li>✔️ Savings & Checking Accounts</li>
-    <li>✔️ Personal & Business Loans</li>
-    <li>✔️ Credit & Debit Cards</li>
-    <li>✔️ 24/7 Online Banking</li>
-  </ul>
-</section>
-
-<!-- <section class="tools">
-  <h3>Tools & Resources</h3>
-  <a href="https://www.calculator.net/loan-calculator.html">Loan Calculator</a>
-  <a
-    href="https://www.practicalmoneyskills.com/en/resources/videos/personal-finance/visa_provides_financial_education_for_everyone.html"
-    >Financial Education</a
-  >
-</section>
-
-<section class="support">
-  <h3>Need Help?</h3>
-  <p>
-    Contact our
-    <a href="https://sbi.co.in/web/customer-care/contact-us"
-      >customer support</a
-    >
-    or visit our <a href="https://sbi.co.in/web/customer-care/faq-s">FAQ</a>.
-  </p>
-</section> -->
+  <section class="features">
+    <h3>Our Services</h3>
+    <ul>
+      <li>✔️ Savings & Checking Accounts</li>
+      <li>✔️ Personal & Business Loans</li>
+      <li>✔️ Credit & Debit Cards</li>
+      <li>✔️ 24/7 Online Banking</li>
+    </ul>
+  </section>
+</main>
 {% endblock %}

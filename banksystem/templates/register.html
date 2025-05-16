@@ -2,9 +2,12 @@
   rel="stylesheet"
   href="{{ url_for('static', filename='sign.css') }}"
 />{% endblock %} {% block title %}Register{% endblock %} {% block content %}
+
 <h2>Register</h2>
 <div class="form-center">
   <form method="POST">
+  </br></br></br>
+  </br></br></br>
     <input name="fname" placeholder="First Name" required /><br />
     <input name="minit" placeholder="Middle Initial" /><br />
     <input name="lname" placeholder="Last Name" required /><br />
@@ -20,4 +23,5 @@
     <button type="submit">Register</button>
   </form>
 </div>
+
 {% endblock %}
