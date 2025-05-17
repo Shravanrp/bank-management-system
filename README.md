@@ -10,6 +10,21 @@ Make sure you have the following installed before proceeding:
 - [Python (3.10 or later)](https://www.python.org/downloads/)
 - [Git](https://git-scm.com/downloads)
 
+## ✨ Features
+
+* ✅ User Authentication (Login/Register)
+* 🏦 Create Bank Account
+* 💸 Apply for a Loan
+* 🔁 Do Transactions (Deposit/Withdraw)
+
+## 🛠️ Technologies Used
+
+* **Frontend**: HTML, CSS
+* **Backend**: Python, Flask
+* **Database**: MySQL (via XAMPP)
+
+---
+
 ## 🔧 Setup Instructions
 
 ### 1. Create a Virtual Environment
@@ -74,22 +89,6 @@ python run.py
 Then, visit: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
-
-## ✨ Features
-
-* ✅ User Authentication (Login/Register)
-* 🏦 Create Bank Account
-* 💸 Apply for a Loan
-* 🔁 Do Transactions (Deposit/Withdraw)
-
-## 🛠️ Technologies Used
-
-* **Frontend**: HTML, CSS
-* **Backend**: Python, Flask
-* **Database**: MySQL (via XAMPP)
-
----
-
 ## 📁 Project Structure
 
 ```plaintext
@@ -106,3 +105,5 @@ bank-management-system/
 ```
 
 ---
+
+
