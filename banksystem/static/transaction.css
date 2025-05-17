@@ -1,0 +1,129 @@
+/* Transaction Page Container */
+body {
+    background-color: #f9fafb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    margin: 1em 0 0.5em;
+    color: #004080;
+}
+
+/* Balance Info */
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Table Styling */
+table {
+    width: 90%;
+    margin: 1em auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 64, 128, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #004080;
+    color: #fff;
+    padding: 0.75em;
+    font-size: 1rem;
+    text-align: center;
+}
+
+td {
+    padding: 0.75em;
+    text-align: center;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f8ff;
+}
+
+/* "No Transactions" Message */
+p:last-of-type {
+    text-align: center;
+    color: #777;
+}
+
+/* Apply Transaction Link */
+
+
+
+
+/* Make table scrollable if too long (still avoid full page scroll) */
+@media (max-height: 700px) {
+    table {
+        max-height: 60vh;
+        overflow-y: auto;
+        display: block;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 1em;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 0.5em;
+        background: #fff;
+    }
+
+    td {
+        text-align: left;
+        padding: 0.4em 0.6em;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        color: #004080;
+    }
+}
+/* Apply Transaction Link */
+.txn-apply-btn {
+    display: block;
+    width: fit-content;
+    margin: 1em auto;
+    text-decoration: none;
+    color: #0073e6;
+    border: 2px solid #0073e6;
+    padding: 0.5em 1.2em;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.txn-apply-btn:hover {
+    background-color: #0073e6;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 115, 230, 0.3);
+}

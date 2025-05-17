@@ -1,0 +1,38 @@
+{% extends 'base.html' %}{% block extra_css %}<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='loan.css') }}"
+/>{% endblock %} {% block title %}My Loans{% endblock %} {% block content %}
+<br />
+<h2>My Loans</h2>
+{% if loans %}
+<table border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Loan ID</th>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Interest (%)</th>
+      <th>EMI</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for loan in loans %}
+    <tr>
+      <td>{{ loan.L_ID }}</td>
+      <td>{{ loan.Loan_type }}</td>
+      <td>₹{{ loan.Amount }}</td>
+      <td>{{ loan.Interest }}</td>
+      <td>₹{{ loan.EMI }}</td>
+      <td>{{ loan.S_date }}</td>
+      <td>{{ loan.E_date }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% else %}
+<p>No loans found.</p>
+{% endif %}
+<a href="{{ url_for('account.apply_loan') }}">apply</a>{% endblock %}

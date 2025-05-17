@@ -1,0 +1,38 @@
+{% extends 'base.html' %}{% block extra_css %}<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='transaction.css') }}"
+/>{% endblock %} {% block title %}My Transactions{% endblock %} {% block content
+%} <br />
+<h2>My Transactions</h2>
+<p><strong>Balance:</strong> ₹{{ accounts.Bal}}</p>
+{% if transactions %}
+<table border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for txn in transactions %}
+    <tr>
+      <td>{{ txn.Trans_id }}</td>
+      <td>{{ txn.Trans_type }}</td>
+      <td>₹{{ txn.Amount }}</td>
+      <td>{{ txn.Date }}</td>
+      <td>{{ txn.Time }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No transactions found.</p>
+{% endif %}<a
+  href="{{ url_for('account.do_transaction') }}"
+  class="txn-apply-btn"
+  >transaction</a
+>
+{% endblock %}
